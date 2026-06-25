@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC | Fronted Developer</title>
+    <link rel="icon" href="./assets/img/logo.jpg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/index.html">
+    <script src="/script.js"></script>
+</head>
+<header class="header">
+    <div class="layout-first page-no">
+        <section class="header-left">
+            <a href="/index.html">
+                <span href="#main" class="ft-size20">Tuncay</span>
+            </a>
+        </section>
+        <nav class="header-right">
+            <ul>
+                <li><a data-i18n="nav_about" href="#about"></a></li>
+                <li><a data-i18n="nav_skills" href="#skills"></a></li>
+                <li><a data-i18n="nav_portfolio" href="#portfolio"></a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="language-pill is-active" onclick="setLanguage('de', this)" aria-pressed="true">DE</button>
+                <button class="language-pill" onclick="setLanguage('en', this)" aria-pressed="false">EN</button>
+            </div>
+            </nav>
+        <nav class="navbar">
+            <button class="menu-toggle" id="menuToggle" onclick="openMenu()">☰</button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close-menu" id="closeMenu" onclick="closeMenu()">✕</button>
+            <ul>
+                <li><a data-i18n="nav_about" href="#about" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_skills" href="#skills" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_portfolio" href="#portfolio" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_contact" href="#contact" onclick="closeMenu()"></a></li>
+                <div class="language-switcher-overlay">
+                    <button class="lang-text is-active switcher-menu" onclick="setLanguage('de', this)" aria-pressed="true">DE</button>
+                    <span class="lang-sep">/</span>
+                    <button class="lang-text switcher-menu" onclick="setLanguage('en', this)" aria-pressed="false">EN</button>
+                </div>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="privacy-main">
+    <a href="../index.html" class="back-button">
+        <img src="/assets/icon/left button.png" alt="Back">
+    </a>
+    <section class="privacy-page">
+        <a href="/index.html" class="back-home-btn">
+            <img src="/assets/icon/comeback return.png" alt="Zurück">
+        </a>
+         <div class="grid"> 
+            <div class="line-second"></div>
+             <h1 data-i18n="" class="greenc">Impressum</h1>
+             <div class="line-right"></div>
+        </div>
+        
+        <div class="impressum-block">
+            <h2 data-i18n="legal_title" class="violet-color">Rechtliche Hinweise</h2>
+            <p data-i18n-html="legal_text">Tuncay Cubukcu <br>
+               Almastr. 21 <br>
+               45649 Recklinghausen <br>
+               Betreiber der Seite</p>
+            <p>Email:<a class="mail-link" href="mailto:tuncay@tuncay-cubukcu.de"> tuncay@tuncay-cubukcu.de</a></p>
+        </div>
+        <div class="impressum-block">
+            <h2 data-i18n="acceptance_title" class="violet-color">Akzeptanz der Bedingungen</h2>
+            <p data-i18n="acceptance_text_1">Durch den Zugriff auf und die Nutzung von Portfolio erkennen Sie die folgenden Bedingungen und Konditionen sowie alle Richtlinien, Leitlinien oder Änderungen an.</p>
+            <p data-i18n="acceptance_text_2">Wir können die Bedingungen und Konditionen jederzeit ohne Vorankündigung ändern oder aktualisieren.</p>
+        </div>
+        <div class="impressum-block">
+            <h2 data-i18n="scope_title" class="violet-color">Umfang und Eigentum des Produkts</h2>
+            <p data-i18n="scope_text_1">Portfolio wurde im Rahmen eines Studentenprojekts in einem Webentwicklungs-Bootcamp bei der Developer Akademie GmbH entwickelt.</p>
+            <p data-i18n="scope_text_2">Das Projekt dient ausschließlich Bildungszwecken und ist nicht für umfangreiche geschäftliche Nutzung vorgesehen.</p>
+            <p data-i18n="scope_text_3">Das Design von Portfolio gehört der Developer Akademie GmbH. Jegliche unbefugte Nutzung oder Vervielfältigung ist untersagt.</p>
+        </div>
+        <div class="impressum-block">
+            <h2 data-i18n="ownership_title" class="violet-color">Eigentumsrechte</h2>
+            <p data-i18n="ownership_text">Alle Rechte an Portfolio sowie den dazugehörigen Inhalten, Marken und urheberrechtlich geschützten Materialien bleiben vorbehalten.</p>
+        </div>
+        <div class="impressum-block">
+            <h2 data-i18n="usage_title" class="violet-color">Nutzung des Produkts</h2>
+            <p data-i18n="usage_text_1">Portfolio darf ausschließlich für rechtmäßige Zwecke verwendet werden. </p>
+            <p data-i18n="usage_text_2">Jede missbräuchliche Nutzung, Belästigung oder Schädigung anderer Personen ist strengstens untersagt.
+            </p>
+        </div>
+        <div class="impressum-block">
+            <h2 data-i18n="disclaimer_title" class="violet-color">Haftungsausschluss</h2>
+            <p data-i18n="disclaimer_text_1">Portfolio wird ohne jegliche Garantie bereitgestellt.</p>
+            <p data-i18n="disclaimer_text_2">Es wird keine Haftung für direkte oder indirekte Schäden übernommen, die durch die Nutzung der Webseite entstehen.</p>
+        </div>
+
+        <div class="impressum-block">
+            <h2 data-i18n="indemnification_title" class="violet-color">Entschädigung</h2>
+            <p data-i18n="indemnification_text">Nutzer verpflichten sich, die Betreiber der Webseite von sämtlichen Ansprüchen freizustellen, die durch eine missbräuchliche Nutzung entstehen könnten.</p>
+        </div>
+        <div class="impressum-block">
+            <h2 data-i18n="contact_title" class="violet-color">Kontakt</h2>
+            <p data-i18n="contact_text">Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter:</p>
+            <a class="mail-link" href="mailto:tuncay@tuncay-cubukcu.de">tuncay@tuncay-cubukcu.de</a>
+            <p class="date" data-i18n="date_text">Datum: Mai 2026</p>
+        </div>
+    </section>
+</main>
+
+<footer class="white footer-line">
+    <div class="layout-page">
+        <div class="footer">
+            <div class="footer-left">
+                <div>
+                    <span class="left-ft">Tuncay</span>
+                </div>
+                <a href="./html/impressum.html" class="white impressum-link d_none_re" data-i18n="legal_notice"></a>
+            </div>
+            <div class="footer-center">
+                <div class="copyright-circle">©</div>
+                <span class="white">Tuncay Cubukcu 2026</span>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/TuncCuDev" title="GitHub - TuncCuDev" aria-label="GitHub - TuncCuDev">
+                    <img src="./assets/icon/github-img.png" alt="GitHub icon">
+                </a>  
+                <a href="mailto:tuncay@tuncay-cubukcu.de" title="Send email" aria-label="Send email">
+                    <img src="./assets/icon/mail.img.png" alt="Email icon">
+                </a>
+                <a href="https://www.linkedin.com/in/tuncay-cu-89078a415/?skipRedirect=true" title="LinkedIn - Tuncay Cubukcu" aria-label="LinkedIn - Tuncay Cubukcu">
+                    <img src="./assets/icon/linkdein.png" alt="LinkedIn icon">
+                </a>
+            </div>
+            <div>
+                <a href="./html/impressum.html" class="white impressum-link display_re" data-i18n="legal_notice"></a>
+            </div>
+        </div>
+    </div>
+</footer>      

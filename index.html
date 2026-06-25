@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC | Fronted Developer</title>
+    <link rel="icon" href="./assets/img/logo.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="./script.js" defer></script>
+    <script src="./js/validation.js" defer></script>
+</head>
+<header class="header">
+    <div class="layout-first page-no">
+        <section class="header-left">
+            <a href="/index.html">
+                <span href="#main" class="ft-size20">Tuncay</span>
+            </a>
+        </section>
+        <nav class="header-right">
+            <ul>
+                <li><a data-i18n="nav_about" href="#about"></a></li>
+                <li><a data-i18n="nav_skills" href="#skills"></a></li>
+                <li><a data-i18n="nav_portfolio" href="#portfolio"></a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="language-pill is-active" onclick="setLanguage('de', this)" aria-pressed="true">DE</button>
+                <button class="language-pill" onclick="setLanguage('en', this)" aria-pressed="false">EN</button>
+            </div>
+            </nav>
+        <nav class="navbar">
+            <button class="menu-toggle" id="menuToggle" onclick="openMenu()">☰</button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close-menu" id="closeMenu" onclick="closeMenu()">✕</button>
+            <ul>
+                <li><a data-i18n="nav_about" href="#about" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_skills" href="#skills" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_portfolio" href="#portfolio" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_contact" href="#contact" onclick="closeMenu()"></a></li>
+                <div class="language-switcher-overlay">
+                    <button class="lang-text is-active switcher-menu" onclick="setLanguage('de', this)" aria-pressed="true">DE</button>
+                    <span class="lang-sep">/</span>
+                    <button class="lang-text switcher-menu" onclick="setLanguage('en', this)" aria-pressed="false">EN</button>
+                </div>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<body>
+    <main id="main">
+        <div class="layout-first">
+            <section>
+                <section id="main" class="first-page">
+                    <section class="first-content">
+                        <div class="image-wrapper">
+                            <img class="my-image front-image" src="./assets/about/potrait.png" alt="background-img">
+                        </div>
+                    </section>
+                    <section class="main-text">
+                        <h1 class="first-page-h1">
+                            <span class="part1" data-i18n="hero_intro"></span>
+                            <div class="main-right">
+                            <span class="part2">Tuncay Cubukcu</span>
+                            <span class="part3" data-i18n="hero_text"></span>
+                            </div>
+                        </h1>
+                        <div class="display">
+                            <a href="#contact" data-i18n="button_talk" class="button display-flex"></a>
+                        </div>
+                    </section>
+                </section>
+                <section class="references-line layout-page">
+                    <div class="left-side display-flex gap30">
+                        <div class="line"></div>
+                            <a href="https://github.com/TuncCuDev" title="GitHub - TuncCuDev">
+                                <img src="./assets/icon/github-img.png" alt="GitHub Profil">
+                            </a>  
+                            <a href="mailto:tuncay@tuncay-cubukcu.de" title="E-Mail an Tuncay">
+                                <img src="./assets/icon/mail.img.png" alt="E-Mail Icon">
+                            </a>
+                            <a href="https://www.linkedin.com/in/tuncay-cu-89078a415/?skipRedirect=true" title="LinkedIn - Tuncay Cu">
+                                <img src="./assets/icon/linkdein.png" alt="LinkedIn Profil">
+                            </a>
+                            <p class="white text">tuncay@tuncay-cubukcu.de</p>
+                        </div>
+                    <a class="scroll-down white">
+                        <span data-i18n="scroll_text"></span>
+                        <img class="background-shadow" src="./assets/icon/scroll-down.png" alt="Background-image">
+                    </a>
+                </section>
+            </section>
+            <section id="next-section" class="next-pages">
+                 <img class="pages-img" src="./assets/img/Shadows.png" alt="background-images">
+                 <div class="layout-page">
+                    <section id="about" class="second-page">
+                        <section>
+                            <h1 class="headline white" data-i18n="about_me"></h1>
+                            <div class="display-flex">
+                                <span class="about-span white padding-bt" data-i18n="about_me_text"></span>
+                            </div>
+                            <div class="display-flex gap30">
+                                <img class="about-img" src="./assets/icon/location.png" alt="">
+                                <span class="about-span white" data-i18n="about_me_location"></span>
+                            </div>
+                            <div class="display-flex gap30">
+                                <img class="about-img" src="./assets/icon/idee.png" alt="">
+                                <span class="about-span white" data-i18n="about_me_workflow"></span>
+                            </div>
+                            <div class="display-flex gap30">
+                                <img class="about-img" src="./assets/icon/problem.png" alt="">
+                                <span class="about-span white" data-i18n="about_me_purpose"></span>
+                            </div>
+                        </section>
+                        <section class="second-right">
+                            <div class="about-profil">
+                                <img class="circle" src="./assets/img/ellipse.png" alt="">
+                                <img class="circle potrait-img" src="./assets/about/potrait.2.png" alt="">
+                                <img class="width150" src="./assets/img/line for profil.png" alt="">
+                            </div>
+                        </section>
+                    </section>
+                    <section id="skills" class="third-page">
+                        <section class="image-container">
+                            <div class="display-column">
+                                <img src="./assets/icon/html14. Icons.png" alt="HTML-Icon">
+                                <span class="icon-span">HTML</span>
+                            </div>
+                            <div class="display-column">
+                                 <img src="./assets/icon/cssLogo.png" alt="CSS-Icon">
+                                 <span class="icon-span">CSS</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/jsLogo.png" alt="JS-Icon">
+                                <span class="icon-span">JavaScript</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/typescript. Icons.png" alt="TypeScript-Icon">
+                                <span class="icon-span">TypeScript</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/angular. Icons.png" alt="Angular-Icon">
+                                <span class="icon-span">Angular</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/supabase. Icons.png" alt="Supabase-Icon">
+                                <span class="icon-span">Supabase</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/git.png" alt="Git-Icon">
+                                <span class="icon-span">Git</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/api.png" alt="API-Icon">
+                                <span class="icon-span">REST-API</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/scrum.png" alt="Scrum-Icon">
+                                <span class="icon-span">Scrum</span>
+                            </div>
+                            <div class="display-column">
+                                <img src="./assets/icon/materialdesign.png" alt="Material-Icon">
+                                <span class="icon-span">Material Design</span>
+                            </div>
+                            <div class="display-column no-hover">
+                                <img src="./assets/icon/continuer.png" alt="Cont.-Icon">
+                                <span class="icon-span">Continually learning</span>
+                                    <div class="tooltip-bubble">Aktuell lerne ich React</div>
+                            </div>
+                        </section>
+                        <section class="third-page-right">
+                            <div class="skills-container">
+                                <h1 class="white skills" data-i18n="my-skills"></h1>
+                                <div class="line skills-line"></div>
+                            </div>
+                            <div class="skills-description project-rights padding">
+                                <span class="white project-rights" data-i18n="skills"></span>
+                            </div>
+                            <div class="skills-box">
+                                <div class="container">    
+                                    <div class="skill-container">
+                                        <span class="white container-first-span" data-i18n-html="skills_question"><span class="violet-color"></span></span>
+                                        <span class="white" data-i18n="skills_box"></span>
+                                        <button class="green skills-btn white" data-i18n="skills_button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                <section id="portfolio" class="fourd-page white">
+                    <div class="text-align-center">
+                        <div class="grid padding-bt">
+                            <div class="line-one"></div>
+                            <h1 class="portfolio-subtitle text-align-center">Portfolio</h1>
+                            <div class="line-right"></div>
+                        </div>
+                        <div class="pd-25">
+                            <span data-i18n="portfolio_title">Eine Auswahl moderner Projekte mit Fokus auf Design, Benutzerfreundlichkeit, Performance und sauberer Entwicklung.</span>
+                        </div>
+                    </div>
+                    <div class="projects-container">
+                        <div class="project-card">
+                            <div class="project-left laptop">
+                                <img class="laptop-frame" src="./assets/img/laptop.png" alt="Laptop">
+                                <img class="laptop-screen project-img" src="./assets/img/pokedex.png" alt="Pokedex-Image">
+                            </div>
+                            <div class="project-right padding-lt50">
+                                <h2 class="violet-color ft-size32">Pokedex</h2>
+                                <p class="greenc ft-size23 text-center">HTML | CSS | JavaScript | API</p>
+                                <p class="text-center" data-i18n="pokedex_description"></p>
+                                <div class="project-buttons">
+                                    <a class="padding-right75" href="https://pokedex.tuncay-cubukcu.de/">
+                                        <button class="violet button-size white" data-i18n="live_preview"></button>
+                                    </a>
+                                    <a href="https://github.com/TuncCuDev/projekt-pokedexapi">
+                                        <button class="button-size white github-bt">GitHub</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card row-reverse project-rights">
+                            <div class="project-left laptop">
+                                <img class="laptop-frame" src="./assets/img/laptop.png" alt="Laptop">
+                                <img class="laptop-screen project-img" src="./assets/img/join.png" alt="Join-Image">
+                            </div>
+                            <div class="project-right padding-rt50;">
+                                <h2 class="violet-color ft-size32">Join</h2>
+                                <p class="text-center-re greenc ft-size23">HTML | CSS | JavaScript | Firsebase </p>
+                                <p class="text-center-re" data-i18n="join_description"></p>
+                                <div class="project-buttons">
+                                    <a class="padding-right75" href="https://join.tuncay-cubukcu.de/">
+                                        <button class="violet button-size white" data-i18n="live_preview"></button>
+                                    </a>
+                                    <a href="https://github.com/TuncCuDev/Join" class="no-padding">
+                                        <button class="button-size white github-bt">GitHub</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-left laptop">
+                                <img class="laptop-frame" src="./assets/img/laptop.png" alt="Laptop">
+                                <img class="laptop-screen project-img" src="./assets/img/elpolloloco.png" alt="El-Pollo-Loco-Image">
+                            </div>
+                            <div class="project-right padding-lt50">
+                                <h2 class="violet-color ft-size32">El Pollo Loco</h2>
+                                <p class="greenc ft-size23 text-center">HTML | CSS | JavaScript</p>
+                                <p class="text-center" data-i18n="pollo_loco_description"></p>
+                                <div class="project-buttons">
+                                    <a class="padding-right75" href="https://el-pollo-loco.tuncay-cubukcu.de/">
+                                        <button class="violet button-size white" data-i18n="live_preview"></button>
+                                    </a>
+                                    <a href="https://github.com/TuncCuDev/El-Pollo-Loco">
+                                        <button class="button-size white github-bt">GitHub</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="testimonial-section">
+                    <div class="testimonial-box">
+                    <img src="./assets/img/“.png" alt="" class="quote-icon">
+                    <p id="testimonialText" class="testimonial-text"></p>
+                    <div class="display-start">
+                        <div class="line-box"></div>
+                        <div id="testimonialAuthor" class="testimonial-author"></div>
+                    </div>
+                </div>
+                <div class="testimonial-navigation">
+                    <img src="./assets/icon/arrow_back.png" class="arrow-btn" onclick="prevTestimonial()" aria-label="Vorherige Bewertung" alt="arrow-icon">
+                    <div class="dots">
+                        <span class="dot active" onclick="showTestimonial(0)"></span>
+                        <span class="dot" onclick="showTestimonial(1)"></span>
+                        <span class="dot" onclick="showTestimonial(2)"></span>
+                    </div>
+                    <img src="./assets/icon/arrow_forward.png" class="arrow-btn" onclick="nextTestimonial()" alt="arrow-icon">
+                </div>
+
+                </section>
+                <section id="contact" class="five-page">
+                    <div class="display-flex-start margin-left25">
+                        <div class="line width"></div>
+                        <h1 class="white pd-right20" data-i18n="contact_title"></h1>
+                    </div>
+                    <section class="contact-container">
+                        <div class="contact-left white">
+                            <div class="flex-direction">
+                                <span class="contact-span" data-i18n="contact_title1"></span> 
+                            </div>
+                            <br>
+                            <span class="contact-span-answer" data-i18n-html="contact_description"><br></span>
+                            <br>
+                            <br>
+                            <span class="contact-span-answer" data-i18n-html="contact_me"><span class="large-size"></span> </span>
+                        </div>
+                        <div class="contact-right">
+                            <form class="contact-form" id="contactForm" novalidate>
+                                <input id="name" type="text" placeholder="Name" oninput="validateForm()" required>
+                                <span id="nameError" class="error-message"></span>
+                                <input id="email" type="email" placeholder="Email" oninput="validateForm()" required>
+                                <span id="emailError" class="error-message"></span>
+                                <textarea id="message" data-i18n-placeholder="message_placeholder" placeholder="Nachricht" oninput="validateForm()" required></textarea>
+                                <span id="messageError" class="error-message"></span>
+                                <div class="checkbox-container white">
+                                    <input type="checkbox" class="checkbox-design" id="privacy" required onchange="validateForm()" aria-label="Datenschutzerklärung zustimmen" title="Datenschutzerklärung zustimmen">
+                                        <label class="privacy" for="privacy">
+                                            <span data-i18n="privacy_text_part1"></span>
+                                            <a href="./html/datenschutz.html" class="privacy-link" data-i18n="privacy_text"></a>
+                                            <span data-i18n="privacy_text_part2"></span>
+                                        </label>
+                                </div>
+                                <span id="privacyError" class="error-message"></span>
+                                <div class="display-flex">
+                                    <button id="submitBtn" class="button disabled" type="submit" title="Senden" aria-label="Senden" data-i18n="contact_button">Senden</button>
+                                </div>       
+                            </form>     
+                        </div>  
+                    </section>            
+                </section>
+                <div class="scroll-top" onclick="scrollToTop()">
+                    <img src="./assets/icon/scroll-up.png" alt="Nach oben">
+                </div>
+            </section> 
+            </div>
+            <div id="toast" class="toast" data-i18n="toast_message"></div> 
+        </div>
+    </main>
+
+    <footer class="white footer-line">
+        <div class="layout-page">
+            <div class="footer">
+                <div class="footer-left">
+                    <div>
+                        <span class="left-ft">Tuncay</span>
+                    </div>
+                    <a href="./html/impressum.html" class="white impressum-link d_none_re" data-i18n="legal_notice"></a>
+                </div>
+                <div class="footer-center">
+                    <div class="copyright-circle">©</div>
+                    <span class="white">Tuncay Cubukcu 2026</span>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/TuncCuDev" title="GitHub - TuncCuDev" aria-label="GitHub - TuncCuDev">
+                        <img src="./assets/icon/github-img.png" alt="GitHub icon">
+                    </a>  
+                    <a href="mailto:tuncay@tuncay-cubukcu.de" title="Send email" aria-label="Send email">
+                        <img src="./assets/icon/mail.img.png" alt="Email icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/tuncay-cu-89078a415/?skipRedirect=true" title="LinkedIn - Tuncay Cubukcu" aria-label="LinkedIn - Tuncay Cubukcu">
+                        <img src="./assets/icon/linkdein.png" alt="LinkedIn icon">
+                    </a>
+                </div>
+                <div>
+                    <a href="./html/impressum.html" class="white impressum-link display_re" data-i18n="legal_notice"></a>
+                </div>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>
+
+
+
+
+

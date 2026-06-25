@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TC | Fronted Developer</title>
+    <link rel="icon" href="./assets/img/logo.jpg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/index.html">
+    <script src="/script.js"></script>
+</head>
+<header class="header">
+    <div class="layout-first page-no">
+        <section class="header-left">
+            <a href="/index.html">
+                <span href="#main" class="ft-size20">Tuncay</span>
+            </a>
+        </section>
+        <nav class="header-right">
+            <ul>
+                <li><a data-i18n="nav_about" href="#about"></a></li>
+                <li><a data-i18n="nav_skills" href="#skills"></a></li>
+                <li><a data-i18n="nav_portfolio" href="#portfolio"></a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="language-pill is-active" onclick="setLanguage('de', this)" aria-pressed="true">DE</button>
+                <button class="language-pill" onclick="setLanguage('en', this)" aria-pressed="false">EN</button>
+            </div>
+            </nav>
+        <nav class="navbar">
+            <button class="menu-toggle" id="menuToggle" onclick="openMenu()">☰</button>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close-menu" id="closeMenu" onclick="closeMenu()">✕</button>
+            <ul>
+                <li><a data-i18n="nav_about" href="#about" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_skills" href="#skills" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_portfolio" href="#portfolio" onclick="closeMenu()"></a></li>
+                <li><a data-i18n="nav_contact" href="#contact" onclick="closeMenu()"></a></li>
+                <div class="language-switcher-overlay">
+                    <button class="lang-text is-active switcher-menu" onclick="setLanguage('de', this)" aria-pressed="true">DE</button>
+                    <span class="lang-sep">/</span>
+                    <button class="lang-text switcher-menu" onclick="setLanguage('en', this)" aria-pressed="false">EN</button>
+                </div>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="privacy-main">
+    <a href="../index.html" class="back-button">
+        <img src="/assets/icon/left button.png" alt="Back">
+    </a>
+    <section class="privacy-page">
+        <div class="grid"> 
+            <div class="line-second"></div>
+             <h1 data-i18n="privacy_title" class="greenc">Datenschutzerklärung</h1>
+             <div class="line-right"></div>
+        </div>
+        <section class="section_container">
+            <h2 class="section_head violet-color" data-i18n="privacy_section1_title">Verantwortlicher</h2>
+            <p data-i18n="privacy_section1_text">Verantwortlich für die Datenverarbeitung auf dieser Webseite:</p>
+            <ul>
+                <li>Tuncay Cubukcu</li>
+                <li>Almastraße 21</li>
+                <li>45649 Recklinghausen</li>
+                <li href="mailto:tuncay-cubukcu@hotmai.de">Email: tuncay@tuncay-cubukcu.de</li>
+            </ul>
+        </section>
+        <section class="section_container">
+            <h2 class="section_head violet-color" data-i18n="privacy_section2_title">Erhebung und Speicherung personenbezogener Daten</h2>
+            <p data-i18n="privacy_section2_text1">Beim Besuch dieser Webseite werden automatisch Informationen durch den Browser an den Server übermittelt.</p>
+            <ul>
+                <li data-i18n="privacy_ip">IP-Adresse</li>
+                <li data-i18n="privacy_browser">Browsertyp und Browserversion</li>
+                <li data-i18n="privacy_os">Betriebssystem</li>
+                <li data-i18n="privacy_date">Datum und Uhrzeit des Zugriffs</li>
+                <li data-i18n="privacy_pages">Besuchte Seiten</li>
+            </ul>
+            <p data-i18n="privacy_section2_text2">Diese Daten dienen ausschließlich der technischen Bereitstellung und Sicherheit der Webseite.</p>
+        </section>
+        <section class="section_container">
+            <h2 class="section_head violet-color" data-i18n="privacy_section3_title">Kontaktformular</h2>
+            <p data-i18n="privacy_section3_text1">Wenn du mich über das Kontaktformular kontaktierst, werden deine Angaben zur Bearbeitung deiner Anfrage gespeichert.</p>
+            <ul>
+                <li data-i18n="privacy_name">Name</li>
+                <li data-i18n="privacy_email">E-Mail-Adresse</li>
+                <li data-i18n="privacy_message">Nachrichteninhalt</li>
+            </ul>
+            <p data-i18n="privacy_section3_text2">Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO.</p>
+        </section>
+        <section class="section_container">
+            <h2 class="section_head violet-color" data-i18n="privacy_section4_title">Hosting</h2>
+            <p data-i18n="privacy_section4_text">Diese Webseite wird bei IONOS gehostet. Der Hosting-Anbieter verarbeitet technische Zugriffsdaten zur Bereitstellung der Webseite.</p>
+        </section>
+        <section class="section_container">
+            <h2 class="section_head violet-color" data-i18n="privacy_section5_title">Speicherdauer</h2>
+            <p data-i18n="privacy_section5_text">Personenbezogene Daten werden nur solange gespeichert, wie dies zur Bearbeitung der Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.</p>
+        </section>
+        <section class="section_container">
+            <h2 class="section_head violet-color" data-i18n="privacy_section6_title">Deine Rechte</h2>
+            <p data-i18n="privacy_section6_text1">Du hast folgende Rechte:</p>
+            <ul>
+                <li data-i18n="privacy_right1">Auskunft über gespeicherte Daten</li>
+                <li data-i18n="privacy_right2">Berichtigung unrichtiger Daten</li>
+                <li data-i18n="privacy_right3">Löschung deiner Daten</li>
+                <li data-i18n="privacy_right4">Einschränkung der Verarbeitung</li>
+                <li data-i18n="privacy_right5">Widerspruch gegen die Verarbeitung</li>
+            </ul>
+            <p data-i18n="privacy_section6_text2">Außerdem hast du das Recht, dich bei einer Datenschutzbehörde zu beschweren.</p>
+        </section>
+        <section class="section_container">
+            <h2 class="section_head violet-color" data-i18n="privacy_section7_title">Kontakt</h2>
+            <p data-i18n="privacy_section7_text">Bei Fragen zum Datenschutz kannst du mich jederzeit kontaktieren:</p>
+            <a class="mail-link" href="mailto:tuncay@tuncay-cubukcu.de">tuncay@tuncay-cubukcu.de</a>
+        </section>
+    </section>
+</main>
+
+<footer class="white footer-line">
+    <div class="layout-page">
+        <div class="footer">
+            <div class="footer-left">
+                <div>
+                    <span class="left-ft">Tuncay</span>
+                </div>
+                <a href="./html/impressum.html" class="white impressum-link d_none_re" data-i18n="legal_notice"></a>
+            </div>
+            <div class="footer-center">
+                <div class="copyright-circle">©</div>
+                <span class="white">Tuncay Cubukcu 2026</span>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/TuncCuDev" title="GitHub - TuncCuDev" aria-label="GitHub - TuncCuDev">
+                    <img src="/assets/icon/github-img.png" alt="GitHub icon">
+                </a>  
+                <a href="mailto:tuncay@tuncay-cubukcu.de" title="Send email" aria-label="Send email">
+                    <img src="/assets/icon/mail.img.png" alt="Email icon">
+                </a>
+                <a href="https://www.linkedin.com/in/tuncay-cu-89078a415/?skipRedirect=true" title="LinkedIn - Tuncay Cubukcu" aria-label="LinkedIn - Tuncay Cubukcu">
+                    <img src="/assets/icon/linkdein.png" alt="LinkedIn icon">
+                </a>
+            </div>
+            <div>
+                <a href="./html/impressum.html" class="white impressum-link display_re" data-i18n="legal_notice"></a>
+            </div>
+        </div>
+    </div>
+</footer>   
