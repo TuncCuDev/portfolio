@@ -55,7 +55,14 @@ body.no-scroll {
 }
 
 .ft-size20 {
-    font-size: 26px
+    font-size: 26px;
+    transition: all 0.2s ease;
+}
+
+.ft-size20:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .header-right ul{
