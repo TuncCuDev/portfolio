@@ -1458,6 +1458,10 @@ p {
     display: none;
 }
 
+#contactForm {
+    scroll-margin-top: 300px;
+}
+
 @keyframes upDown {
     0% {
         transform: translateY(0) scale(1);
