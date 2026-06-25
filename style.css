@@ -1173,6 +1173,18 @@ ul li a.active::after {
     height: 15px;
 }
 
+#about {
+    scroll-margin-top: 200px;
+}
+
+#skills {
+    margin-top: -20px;
+}
+
+#portfolio {
+    margin-top: -20px;
+}
+
 .back-button {
     display: none;
     align-self: flex-end;
