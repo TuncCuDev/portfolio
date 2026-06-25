@@ -29,10 +29,11 @@
             </div>
             </nav>
         <nav class="navbar">
-            <button class="menu-toggle" id="menuToggle" onclick="openMenu()">☰</button>
+            <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                <img src="/assets/icon/burger menu.svg" alt="Menu-Burger">
+            </button>
         </nav>
         <div class="mobile-menu" id="mobileMenu">
-            <button class="close-menu" id="closeMenu" onclick="closeMenu()">✕</button>
             <ul>
                 <li><a data-i18n="nav_about" href="#about" onclick="closeMenu()"></a></li>
                 <li><a data-i18n="nav_skills" href="#skills" onclick="closeMenu()"></a></li>
@@ -64,7 +65,7 @@
         
         <div class="impressum-block">
             <h2 data-i18n="legal_title" class="violet-color">Rechtliche Hinweise</h2>
-            <p data-i18n-html="legal_text">Tuncay Cubukcu <br>
+            <p>Tuncay Cubukcu <br>
                Almastr. 21 <br>
                45649 Recklinghausen <br>
             </p>

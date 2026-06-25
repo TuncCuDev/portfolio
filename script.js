@@ -159,19 +159,14 @@ window.addEventListener("scroll", () => {
 });
 
 /**
- * Opens the mobile menu.
+ * Toggles the mobile menu open/close.
  */
-function openMenu() {
-    document.getElementById('mobileMenu').classList.add('active');
-    document.body.classList.add('no-scroll');
-}
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const body = document.body;
 
-/**
- * Closes the mobile menu.
- */
-function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('active');
-    document.body.classList.remove('no-scroll');
+    menu.classList.toggle('active');
+    body.classList.toggle('no-scroll');
 }
 
 /**
