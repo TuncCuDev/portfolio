@@ -248,9 +248,3 @@ function showTestimonial(index) {
     currentIndex = index;
     renderTestimonial();
 }
-
-function scrollToContact() {
-    document.getElementById('contactForm').scrollIntoView({
-        behavior: 'smooth'
-    });
-}
