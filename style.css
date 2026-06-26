@@ -452,7 +452,7 @@ h2,
 }
 
 #about {
-    scroll-margin-top: 140px;
+    scroll-margin-top: 80px;
 }
 
 .about-img {
@@ -479,12 +479,12 @@ h2,
 
 .potrait-img {
     position: absolute;
-    top: 51%;
-    left: 36%;
+    top: 55%;
+    left: 34%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    width: 60%;
-    height: 90%;
+    width: 58%;
+    height: 86%;
     z-index: 1;
 }
 

@@ -161,7 +161,7 @@
         justify-content: center;
         align-items: center;
         gap: 0px;
-        padding-top: 100px;
+        padding-top: 50px;
     }
 
     .width150 {
@@ -351,6 +351,11 @@
 }
 
 @media (max-width: 700px) {
+    .pages-img {
+        object-fit: cover;
+        object-position: center;
+    }
+
     .contact-left, .contact-right {
         width: 95%;
     }
