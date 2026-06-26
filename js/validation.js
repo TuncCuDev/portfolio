@@ -65,7 +65,7 @@ function validateAll(name, email, message, privacy) {
     if (email.value.trim() === "") {
         setError(email, "emailError", "Your email is required");
         valid = false;
-    } else if (!email.value.includes("@")) {
+    } else if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
         setError(email, "emailError", "Please enter a valid email address");
         valid = false;
     } else {
