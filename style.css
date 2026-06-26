@@ -1445,6 +1445,10 @@ p {
     border-top: 10px solid #ffffff;
 }
 
+.checkbox-design {
+    flex-shrink: 0;
+}
+
 .display_re {
     display: none;
 }
