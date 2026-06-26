@@ -1414,15 +1414,16 @@ p {
 
 .tooltip-bubble { 
     position: absolute; 
-    bottom: 100%; left: 50%;
+    bottom: 100%; 
+    left: 50%;
     transform: translateX(-50%) translateY(10px); 
     background: #ffffff; 
     color: #000; 
     padding: 6px 10px; 
     border-radius: 8px; 
     font-size: 16px; 
-    height: 75px; 
-    width: 150px; 
+    height: 100px; 
+    width: 200px; 
     white-space: normal; 
     opacity: 1; 
     visibility: hidden; 
@@ -1447,6 +1448,32 @@ p {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #ffffff;
+}
+
+.tooltip-bubble img {
+    width: 24px;
+    filter: brightness(0);
+    height: 24px;
+}
+
+.bubble-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.bubblel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bubble-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .checkbox-design {
