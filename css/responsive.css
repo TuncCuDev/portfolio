@@ -466,5 +466,6 @@
 
     .first-page::after {
         bottom: clamp(230px, 25vw, 350px);
+    }
 }
 
