@@ -11,9 +11,7 @@ function validateForm() {
     const privacy = document.getElementById("privacy");
     const submitBtn = document.getElementById("submitBtn");
     resetErrors();
-
-    const valid =
-        validateAll(name, email, message, privacy);
+    const valid = validateAll(name, email, message, privacy);
     if (valid) {
         enableSubmitButton(submitBtn);
     } else {
@@ -184,6 +182,9 @@ function showToast(message) {
     }, 3000);
 }
 
+/**
+ * Adds the submit event listener to the contact form after the page has loaded.
+ */
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("contactForm")
         .addEventListener("submit", handleFormSubmit);
