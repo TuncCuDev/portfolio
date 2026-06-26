@@ -11,7 +11,10 @@ function validateForm() {
     const privacy = document.getElementById("privacy");
     const submitBtn = document.getElementById("submitBtn");
     resetErrors();
-    const valid = validateAll(name, email, message, privacy);
+    const valid = validateName(name) &&
+        validateEmail(email) &&
+        validateMessage(message) &&
+        validatePolicy(privacy);
     if (valid) {
         enableSubmitButton(submitBtn);
     } else {
@@ -52,39 +55,57 @@ function setValid(input) {
 }
 
 /**
- * Validates the name, email, message, privaycy field and checks if it is not empty. 
+ * Validates the name field and checks if it is not empty. 
  */
-function validateAll(name, email, message, privacy) {
-    let valid = true;
+function validateName(name) {
     if (name.value.trim() === "") {
         setError(name, "nameError", "Your name is required");
-        valid = false;
-    } else {
-        setValid(name);
+        return false;
     }
+    setValid(name);
+    return true;
+}
+
+/**
+ * Validates the email field and checks if it is not empty. 
+ */
+function validateEmail(email) {
     if (email.value.trim() === "") {
         setError(email, "emailError", "Your email is required");
-        valid = false;
-    } else if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        setError(email, "emailError", "Please enter a valid email address");
-        valid = false;
-    } else {
-        setValid(email);
+        return false;
     }
+    if (!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        setError(email, "emailError", "Please enter a valid email address");
+        return false;
+    }
+    setValid(email);
+    return true;
+}
+
+/**
+ * Validates the message field and checks if it is not empty. 
+ */
+function validateMessage(message) {
     if (message.value.trim() === "") {
         setError(message, "messageError", "Your message is required");
-        valid = false;
-    } else {
-        setValid(message);
+        return false;
     }
+    setValid(message);
+    return true;
+}
+
+
+/**
+ * Validates the privacy field and checks if it is not empty. 
+ */
+function validatePolicy(privacy) {
     if (!privacy.checked) {
         document.getElementById("privacyError").textContent =
             "Your privacy is required";
-        valid = false;
-    } else {
-        document.getElementById("privacyError").textContent = "";
+        return false;
     }
-    return valid;
+    document.getElementById("privacyError").textContent = "";
+    return true;
 }
 
 /**
