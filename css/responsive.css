@@ -17,19 +17,12 @@
         margin-bottom: 0px;
     }
 
-    .image-wrapper::before {
-        top: -180px;
-        left: 50%;
-        width: clamp(100%, 70vw, 180%);
-        height: 150%;
-    }
-
     .button {
         width: 150px;
     }
 
     .first-page::after {
-        bottom: clamp(245px, 30vw, 350px);
+        bottom: clamp(250px, 30vw, 375px);
     }
 }
 
@@ -211,11 +204,6 @@
         position: relative;
         padding-top: 100px;
     }
-
-    .image-wrapper::before {
-        top: -90px;
-        height: 120%;
-    }
 }
 
 @media (max-width: 750px) {
@@ -377,7 +365,7 @@
 
     .front-image {
         left: 0px;
-        height: 500px;
+        height: 450px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -437,7 +425,7 @@
     }
 
     .button {
-        width: 124px;
+        width: 150px;
     }
 
     .gap30 {
@@ -475,5 +463,8 @@
     .back-button {
         display: block;
     }
+
+    .first-page::after {
+        bottom: clamp(230px, 25vw, 350px);
 }
 
