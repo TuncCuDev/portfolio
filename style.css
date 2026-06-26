@@ -451,6 +451,10 @@ h2,
     padding-top: 10px;
 }
 
+#about {
+    scroll-margin-top: 140px;
+}
+
 .about-img {
     height: autp;
     width: 25px;
