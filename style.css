@@ -448,11 +448,11 @@ h2,
     align-items: flex-start;
     display: flex;
     gap: 100px;
-    padding-top: 10px;
+    padding-top: 80px;
 }
 
 #about {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 100px;
 }
 
 .about-img {

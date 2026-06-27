@@ -1,0 +1,12 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+#about {
+    padding-top: 80px;
+}
+
+section[id] {
+    scroll-margin-top: 120px;
+}
