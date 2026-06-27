@@ -266,3 +266,21 @@ function showTestimonial(index) {
     currentIndex = index;
     renderTestimonial();
 }
+
+/**
+ * Animation for scrolling through sections.
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    if (sections.length === 0) return;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+    sections.forEach(section => observer.observe(section));
+});

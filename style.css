@@ -29,6 +29,17 @@ body.no-scroll {
     overflow: hidden;
 }
 
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .page-wrapper {
     width: 100%;
     max-width: 1440px;
@@ -250,7 +261,7 @@ h2,
     width: clamp(300px, 99vw, 950px);
     height: clamp(300px, 90vw, 850px);
     transform: translate(-50%, -50%);
-    background: url("./assets/img/Photo shadows.png") no-repeat center;
+    background: url("./assets/img/Photo\ shadows\ \(2\).png") no-repeat center;
     background-size: contain;
     z-index: 0;
     pointer-events: none;
