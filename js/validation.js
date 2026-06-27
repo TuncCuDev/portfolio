@@ -1,20 +1,22 @@
 let isSubmitting = false;
+let touched = {};
 
+
+function markTouched(field) {
+    touched[field.id] = true;
+}
 
 /**
  * Validates the contact form fields and enables or disables the submit button based on the overall validation result.
  */
 function validateForm() {
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const message = document.getElementById("message");
-    const privacy = document.getElementById("privacy");
-    const submitBtn = document.getElementById("submitBtn");
     resetErrors();
-    const valid = validateName(name) &&
-        validateEmail(email) &&
-        validateMessage(message) &&
-        validatePolicy(privacy);
+    const valid = [
+        validateName(document.getElementById("name")),
+        validateEmail(document.getElementById("email")),
+        validateMessage(document.getElementById("message")),
+        validatePolicy(document.getElementById("privacy"))
+    ].every(Boolean);
     if (valid) {
         enableSubmitButton(submitBtn);
     } else {
@@ -58,10 +60,13 @@ function setValid(input) {
  * Validates the name field and checks if it is not empty. 
  */
 function validateName(name) {
+    name.dataset.touched = "true";
+
     if (name.value.trim() === "") {
         setError(name, "nameError", "Your name is required");
         return false;
     }
+    document.getElementById("nameError").textContent = "";
     setValid(name);
     return true;
 }
@@ -70,6 +75,8 @@ function validateName(name) {
  * Validates the email field and checks if it is not empty. 
  */
 function validateEmail(email) {
+    email.dataset.touched = "true";
+    
     if (email.value.trim() === "") {
         setError(email, "emailError", "Your email is required");
         return false;
@@ -78,6 +85,7 @@ function validateEmail(email) {
         setError(email, "emailError", "Please enter a valid email address");
         return false;
     }
+    document.getElementById("emailError").textContent = "";
     setValid(email);
     return true;
 }
@@ -86,10 +94,13 @@ function validateEmail(email) {
  * Validates the message field and checks if it is not empty. 
  */
 function validateMessage(message) {
+    message.dataset.touched = "true";
+    
     if (message.value.trim() === "") {
         setError(message, "messageError", "Your message is required");
         return false;
     }
+    document.getElementById("messageError").textContent = "";
     setValid(message);
     return true;
 }
@@ -160,12 +171,12 @@ function getFormData() {
     };
 }
 
+/**
+ * Clears error fields.
+ */
 function clearErrors() {
     document.querySelectorAll(".error-message")
         .forEach(el => el.textContent = "");
-    document.querySelectorAll("input, textarea").forEach(el => {
-        el.classList.remove("input-error", "input-valid");
-    });
 }
 
 /**
@@ -177,7 +188,6 @@ function handleSuccess() {
     document.getElementById('email').value = '';
     document.getElementById('message').value = '';
     document.getElementById('privacy').checked = false;
-    validateForm();
 }
 
 /**
@@ -207,6 +217,17 @@ function showToast(message) {
  * Adds the submit event listener to the contact form after the page has loaded.
  */
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("contactForm")
-        .addEventListener("submit", handleFormSubmit);
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+    const privacy = document.getElementById("privacy");
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", handleFormSubmit);
+
+    name.addEventListener("blur", () => validateName(name));
+    email.addEventListener("blur", () => validateEmail(email));
+    message.addEventListener("blur", () => validateMessage(message));
+    privacy.addEventListener("change", () => validatePolicy(privacy));
 });

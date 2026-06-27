@@ -312,11 +312,11 @@
                         </div>
                         <div class="contact-right">
                             <form class="contact-form" id="contactForm" novalidate>
-                                <input id="name" type="text" placeholder="Name" oninput="validateForm()" required>
+                                <input id="name" type="text" placeholder="Name" oninput="validateName(this)" required>
                                 <span id="nameError" class="error-message"></span>
-                                <input id="email" type="email" placeholder="Email" oninput="validateForm()" required>
+                                <input id="email" type="email" placeholder="Email" oninput="validateEmail(this)" required>
                                 <span id="emailError" class="error-message"></span>
-                                <textarea id="message" data-i18n-placeholder="message_placeholder" placeholder="Nachricht" oninput="validateForm()" required></textarea>
+                                <textarea id="message" data-i18n-placeholder="message_placeholder" placeholder="Nachricht" oninput="validateMessage(this)" required></textarea>
                                 <span id="messageError" class="error-message"></span>
                                 <div class="checkbox-container white">
                                     <input type="checkbox" class="checkbox-design" id="privacy" required onchange="validateForm()" aria-label="Datenschutzerklärung zustimmen" title="Datenschutzerklärung zustimmen">
