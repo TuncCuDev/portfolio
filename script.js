@@ -39,21 +39,20 @@ window.addEventListener("scroll", () => {
     });
 });
 
+/**
+ * For scrolling through html sites.
+ */
 window.addEventListener("load", () => {
     if (!window.location.hash) return;
-
     const target = document.querySelector(window.location.hash);
     if (!target) return;
-
     const header = document.querySelector(".header");
     const headerHeight = header ? header.offsetHeight : 100;
-
     setTimeout(() => {
         const y =
             target.getBoundingClientRect().top +
             window.pageYOffset -
-            headerHeight + 60;
-
+            headerHeight;
         window.scrollTo({
             top: y,
             behavior: "smooth"
@@ -211,6 +210,7 @@ async function sendContactRequest(data) {
  * Renders the current testimonial text, author, and active navigation dot.
  */
 function renderTestimonial() {
+    if (!document.getElementById("testimonialText")) return;
     const t = translations;
     document.getElementById("testimonialText").textContent =
         t[testimonials[currentIndex].textKey];

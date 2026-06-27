@@ -463,7 +463,7 @@ h2,
 }
 
 #about {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 140px;
 }
 
 .about-img {
@@ -991,30 +991,6 @@ footer {
 
 .mail-link:hover {
     text-decoration: underline;
-}
-
-.back-home-btn img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-}
-
-.back-home-btn {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #9747FF;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-.back-home-btn:hover {
-    transform: scale(1.1);
 }
 
 .privacy-main {
