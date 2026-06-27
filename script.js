@@ -15,32 +15,25 @@ const testimonials = [
     }
 ];
 
-
 /**
- * Highlights the navigation link of the section currently visible in the viewport while scrolling.
+ * It reveals elements with an animation when they scroll into view.
  */
-window.addEventListener("scroll", () => {
-    const links = document.querySelectorAll("nav ul li a");
-    const sections = document.querySelectorAll("section[id]");
-    let current = "";
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 &&
-            rect.bottom >= window.innerHeight / 2) {
-            current = section.id;
-        }
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.1,
     });
-        links.forEach(link => {
-        link.classList.remove("active");
-
-        if (link.hash === "#" + current) {
-            link.classList.add("active");
-        }
-    });
+    elements.forEach(el => observer.observe(el));
 });
 
 /**
- * For scrolling through html sites.
+ * This code automatically scrolls smoothly to a section of the page.
  */
 window.addEventListener("load", () => {
     if (!window.location.hash) return;
@@ -266,21 +259,3 @@ function showTestimonial(index) {
     currentIndex = index;
     renderTestimonial();
 }
-
-/**
- * Animation for scrolling through sections.
- */
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    if (sections.length === 0) return;
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-    sections.forEach(section => observer.observe(section));
-});
