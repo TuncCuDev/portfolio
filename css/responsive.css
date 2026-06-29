@@ -1,3 +1,50 @@
+@media (min-width: 1441px) {
+    .first-page::after {
+        content: "";
+        background: url("/assets/icon/Vectorr.png") no-repeat center bottom;;
+        background-size: 100% 100%;
+        height: clamp(900px, 100vw, 3310px);
+        position: absolute;
+        inset: auto 0 0 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .references-line {
+        bottom: 500px;
+    }
+
+    .front-image {
+        margin-bottom: 200px;
+        position: relative;
+        z-index: 10;
+        left: 0px;
+        height: 1900px;
+    }
+
+    .main-text {
+        margin-left: -300px;
+    }
+
+    .image-wrapper {
+        margin-left: -200px;
+    }
+}
+
+@media (max-width: 1440px) {
+     .main-text {
+        margin-left: 0px;
+    }
+
+    .image-wrapper {
+        margin-left: 0px;
+    }
+
+    .references-line {
+        bottom: 150px;
+    }
+}
+
 @media (max-width: 1275px) {
     .first-page {
         flex-direction: column;
